@@ -88,8 +88,8 @@ public class DarkRoomGame {
     private static void interactWithGirl() {
         if(metGirl) {
             System.out.println("What do you want her to build?:");
-            System.out.println("1. A hut");
-            System.out.println("2. A cart");
+            System.out.println("1. A hut: Units of wood required-20");
+            System.out.println("2. A cart: Units of wood required-3");
 
             int choice2 = scanner.nextInt();
 
@@ -101,20 +101,20 @@ public class DarkRoomGame {
                         wood = wood - 20;
                         hasWood = false;
                     } else {
-                        System.out.println("You don't have wood to build a hut.");
+                        System.out.println("You don't have enough wood to build a hut.");
                     }
                     break;
                 case 2:
-                    if (wood == 1) {
+                    if (wood == 3) {
                         System.out.println("You asked the builder to build a cart. She built a cart.");
                         System.out.println("Now you can carry more wood.");
 
-                        wood = wood - 1;
+                        wood = wood - 3;
 
                         hasCart = true;
                         hasWood = false;
                     } else {
-                        System.out.println("You don't have wood to build a cart.");
+                        System.out.println("You don't have enough wood to build a cart.");
                     }
                     break;
                 default:
@@ -123,9 +123,9 @@ public class DarkRoomGame {
             }
         }
         else{
-                System.out.println("You asked her who she was, but she is not willing to talk.");
-            }
-
+            System.out.println("You asked her who she was, but she is not willing to talk.");
         }
+
+    }
 
 }
